@@ -35,8 +35,8 @@ SOURCE="$MODPATH/system/vendor/lib64/libwvhidl.so"
 TARGET="/system/vendor/lib64/libwvhidl.so"
 
 # Back up the original file (optional, recommended)
-if [ ! -f "$MODDIR/original_libwvhidl.so" ]; then
-    cp "$TARGET" "$MODDIR/original_libwvhidl.so"
+if [ ! -f "$MODPATH/original_libwvhidl.so" ]; then
+    cp "$TARGET" "$MODPATH/original_libwvhidl.so"
 fi
 
 # Replace the file
