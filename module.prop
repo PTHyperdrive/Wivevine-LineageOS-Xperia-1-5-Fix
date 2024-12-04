@@ -1,7 +1,7 @@
-id=MMT-Ex
-name=Magisk Module Template Extended
-version=v3.7
+id=WLTX-V1
+name=Wivevine LineageOS TempFix Xperia 1/5
+version=v1.0
 versionCode=19
-author=Zackptg5
-description=Magisk Module Template Extended
+author=PTHyperdrive
+description=Wivevine fix for 
 updateJson=https://raw.githubusercontent.com/Zackptg5/MMT-Extended/master/update.json
