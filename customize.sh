@@ -27,10 +27,9 @@
 
 # Construct your list in the following format
 # This is an example
-MODDIR=${0%/*}
 
 # Source file from the module
-SOURCE="$MODDIR/system/vendor/lib64/libwvhidl.so"
+SOURCE="$MODPATH/system/vendor/lib64/libwvhidl.so"
 
 # Target file in the Android device
 TARGET="/system/vendor/lib64/libwvhidl.so"
