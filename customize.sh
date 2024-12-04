@@ -27,18 +27,25 @@
 
 # Construct your list in the following format
 # This is an example
-REPLACE_EXAMPLE="
-/system/app/Youtube
-/system/priv-app/SystemUI
-/system/priv-app/Settings
-/system/framework
-"
+MODDIR=${0%/*}
 
-# Construct your own list here
-REPLACE="'
-/system/vendor/lib64
-"
+# Source file from the module
+SOURCE="$MODDIR/system/vendor/lib64/libwvhidl.so"
 
+# Target file in the Android device
+TARGET="/system/vendor/lib64/libwvhidl.so"
+
+# Back up the original file (optional, recommended)
+if [ ! -f "$MODDIR/original_libwvhidl.so" ]; then
+    cp "$TARGET" "$MODDIR/original_libwvhidl.so"
+fi
+
+# Replace the file
+cp "$SOURCE" "$TARGET"
+chmod 644 "$TARGET"
+
+# Log the replacement (optional)
+log -t Magisk "Replaced libwvhidl.so with the version from the module"
 ##########################################################################################
 # Permissions
 ##########################################################################################
