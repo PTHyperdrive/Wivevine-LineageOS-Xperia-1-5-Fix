@@ -29,6 +29,23 @@
 # This is an example
 
 # Source file from the module
+SOURCEENGINE="$MODPATH/system/vendor/lib64/mediadrm/libwvdrmengine.so"
+
+# Target file in the Android device
+TARGETENGINE="/system/vendor/lib64/libwvdrmengine.so"
+
+# Back up the original file (optional, recommended)
+if [ ! -f "$MODPATH/original_libwvdrmengine.so" ]; then
+    cp "$TARGETENGINE" "$MODPATH/original_libwvdrmengine.so"
+fi
+
+# Replace the file
+cp "$SOURCEENGINE" "$TARGETENGINE"
+chmod 644 "$TARGETEGINE"
+
+# Log the replacement (optional)
+log -t Magisk "Replaced libwvdrmengine.so with the version from the module"
+
 SOURCE="$MODPATH/system/vendor/lib64/libwvhidl.so"
 
 # Target file in the Android device
