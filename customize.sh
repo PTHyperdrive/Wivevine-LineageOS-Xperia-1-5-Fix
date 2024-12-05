@@ -41,7 +41,7 @@ fi
 
 # Replace the file
 cp "$SOURCEENGINE" "$TARGETENGINE"
-chmod 644 "$TARGETEGINE"
+chmod 644 "$TARGETENGINE"
 
 # Log the replacement (optional)
 log -t Magisk "Replaced libwvdrmengine.so with the version from the module"
